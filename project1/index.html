@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Double Slider Form</title>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="form-container">
+            <!-- The sign up form -->
+            <div class="form-pane pane signup-pane">
+                <form action="#">
+                    <h1>Create Account</h1><br>
+                    <input class="form-control" type="text" placeholder="Name" /><br>
+                    <input class="form-control" type="email" placeholder="Email" /><br>
+                    <input class="form-control" type="password" placeholder="Password" /><br><br>
+                    <button>Sign Up</button>
+                </form>
+            </div>
+            <!-- The sign in form -->
+            <div class="form-pane pane signin-pane">
+                <form action="#">
+                    <h1>Sign in</h1><br>
+                    <input class="form-control" type="email" placeholder="Email" /><br>
+                    <input class="form-control" type="password" placeholder="Password" /><br><br>
+                    <a href="#">Forgot your password?</a><br><br>
+                    <button>Sign In</button>
+                </form>
+            </div>
+        </div>
+        <div class="overlay-container">
+            <!-- Put the overlay code here -->
+            <div class="overlay">
+                <div class="overlay-bg">
+                    <div class="overlay-content">
+                        <div class="flex-cont" style="height: 100%">
+                            <div class="flex-5" style="display: flex; align-items: center">
+                                <!-- The signin screen pane -->
+                                <div class="overlay-pane signin-overlay">
+                                    <h1>Welcome Back!</h1><br>
+                                    <p>To stay connected with us, please login with your personal info</p><br>
+                                    <button class="ghost flip-btn" id="signIn">Or create a new account</button>
+                                </div>
+                            </div>
+                            <div class="flex-2"></div>
+                            <div class="flex-5" style="display: flex; align-items: center">
+                                <!-- The signup screen pane -->
+                                <div class="overlay-pane signup-overlay">
+                                    <h1>Hello, Friend!</h1><br>
+                                    <p>Enter your personal details and start your journey with us</p><br>
+                                    <button class="ghost flip-btn" id="signUp">Or log in with your account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script>
+        /* Get the elements */
+        const outer = document.querySelector(".outer");
+        const switchButtons = document.querySelectorAll(".flip-btn");
+        switchButtons.forEach(btn => btn.addEventListener('click', () => outer.classList.toggle("moved")));
+    </script>
+
+</body>
+
+</html>

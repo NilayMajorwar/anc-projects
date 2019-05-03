@@ -1,0 +1,176 @@
+           :root {
+              --time: 0.3s;
+              --bezier: ease-in-out;
+          }
+          
+          body {
+              font-family: 'Raleway', sans-serif !important;
+              font-size: 1.1vw;
+          }
+          
+          button {
+              width: 100%;
+              font-size: 1.1vw;
+              border-radius: 20px;
+              border: 1px solid #6920dd;
+              background-color: #7e2bff;
+              color: #ffffff;
+              padding: 3% 2%;
+          }
+          
+          button.ghost {
+              background-color: transparent;
+              border-color: #ffffff;
+          }
+          
+          button:active {
+              transform: scale(0.95);
+          }
+          
+          button:hover {
+              transform: scale(1.01);
+          }
+          
+          button:focus {
+              outline: none;
+          }
+          
+          input {
+              width: 100%;
+              font-size: 1.1vw;
+              background-color: #efefef;
+              border: none;
+              margin: 1% 0;
+              padding: 3% 3%;
+          }
+          
+          .pane a {
+              text-decoration: none;
+          }
+          
+          .signup-pane button {
+              border: 1px solid #b32b6a;
+              background-color: #cf317b;
+          }
+          
+          .flex-cont {
+              display: flex;
+              height: 100%;
+          }
+          
+          .outer {
+              position: relative;
+              overflow: hidden;
+              box-shadow: 0 0 20px 0;
+              border-radius: 3%;
+              width: 50%;
+              height: 25vw;
+          }
+          
+          .flex-5 {
+              flex: 5;
+          }
+          
+          .flex-2 {
+              flex: 2;
+          }
+          
+          .pane {
+              padding: 10% 15% 20% 15%;
+              transition: opacity var(--time) cubic-bezier(1, 0, 0, 1);
+          }
+          
+          .overlay-pane {
+              padding: 20% 15%;
+          }
+          
+          .form-container {
+              position: absolute;
+              z-index: 5;
+              left: 50%;
+              width: 50%;
+              height: 100%;
+              transition: transform var(--time) var(--bezier);
+          }
+          
+          .overlay-container {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 50%;
+              height: 100%;
+              z-index: 10;
+              transition: transform var(--time) var(--bezier);
+          }
+          
+          .form-pane {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 60%;
+              width: 70%;
+          }
+          
+          .signup-pane {
+              /* FIRST SCREEN */
+              opacity: 0;
+              z-index: 5;
+          }
+          
+          .signin-pane {
+              /* FIRST SCREEN */
+              opacity: 1;
+              z-index: 6
+          }
+          
+          .overlay {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              color: white;
+          }
+          
+          .overlay-bg {
+              height: 100%;
+              width: 200%;
+              transition: transform var(--time) var(--bezier);
+              background: url("http://www.brandgradients.com/img/backgrounds/instagram-hex-colors-gradient-background.png");
+              background-size: cover;
+          }
+          
+          .overlay-content {
+              width: 110%;
+              height: 100%;
+              transition: transform var(--time) var(--bezier);
+          }
+          
+          .signup-overlay {
+              text-align: right;
+          }
+          /* SECOND SCREEN */
+          
+          .moved .form-container {
+              transform: translateX(-100%);
+          }
+          
+          .moved .overlay-content {
+              transform: translateX(-11%);
+          }
+          
+          .moved .overlay-container {
+              transform: translateX(100%);
+          }
+          
+          .moved .overlay-bg {
+              transform: translateX(-50%);
+          }
+          
+          .moved .signup-pane {
+              z-index: 6;
+              opacity: 1;
+          }
+          
+          .moved .signin-pane {
+              z-index: 5;
+              opacity: 0;
+          }
