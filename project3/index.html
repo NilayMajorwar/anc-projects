@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="brand">The <span>Yeah</span> Company</h1>
+        <div class="wrapper animated bounceInLeft">
+            <div class="company-info">
+                <!-- Company info -->
+                <img src="https://www.sbsgroup.com.sg/wp-content/uploads/Register-Cleaning-Company-in-Singapore.jpg" alt="Company image">
+                <h3>The Yeah Company</h3>
+                <ul>
+                    <li><i class="fas fa-road"></i> 221 B, Baker Street</li>
+                    <li><i class="fas fa-envelope"></i> yeah@tyc.org</li>
+                    <li><i class="fas fa-phone"></i> Ph: 112-358-1321</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <!-- Contact form -->
+                <h3>Email Us</h3>
+                <div class="alert">Your message has been sent!</div>
+                <form id="contactForm">
+                    <p>
+                        <input type="text" name="name" placeholder="Name" id="name" required></p>
+                    <p>
+                        <input type="text" name="company" placeholder="Company" id="company"></p>
+                    <p>
+                        <input type="email" name="email" placeholder="Email address" id="email" required></p>
+                    <p>
+                        <input type="text" name="phone" placeholder="Phone number" id="phone"></p>
+                    <p class="full">
+                        <textarea name="message" rows="5" placeholder="Your message" id="message"></textarea></p>
+                    <p class="full"><button type="submit">Submit</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
