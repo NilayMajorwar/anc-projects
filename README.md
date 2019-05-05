@@ -1,2 +1,2 @@
-# anc-projects
-Starter projects for the AnC Council (Portal Project).
+# ARC Starter Projects
+Starter projects for the ARC Research Portal Project.
