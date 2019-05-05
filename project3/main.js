@@ -1,13 +1,7 @@
 /* Firebase */
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDngXOeGcVPvj-51oopEZidB37MgwsZksk",
-    authDomain: "samplecontactform-e2a45.firebaseapp.com",
-    databaseURL: "https://samplecontactform-e2a45.firebaseio.com",
-    projectId: "samplecontactform-e2a45",
-    storageBucket: "samplecontactform-e2a45.appspot.com",
-    messagingSenderId: "902762065078",
-    appId: "1:902762065078:web:e6d283258d0da14e"
+    /* Details about your Firebase App here */
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
