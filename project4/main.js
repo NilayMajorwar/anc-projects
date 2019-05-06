@@ -5,7 +5,12 @@ const launchDate = new Date("May 20, 2019, 00:00:00").getTime();
 function setTime() {
     const currentTime = new Date().getTime();
     const millis = launchDate - currentTime;
-
+    
+    if (millis < 0) {
+        clearInterval(interval);
+        timer.innerHTML = "We're up!"
+    }
+    
     const days = Math.floor(millis / (1000 * 60 * 60 * 24));
     const hours = Math.floor(millis / (1000 * 60 * 60) - 24 * days);
     const minutes = Math.floor(millis / (1000 * 60) - 24 * 60 * days - 60 * hours);
@@ -20,4 +25,4 @@ function setTime() {
 }
 
 /* Set the interval */
-setInterval(setTime, 1000);
+const interval = setInterval(setTime, 1000);
